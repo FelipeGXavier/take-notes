@@ -14,8 +14,11 @@
 
 ### Implementando um driver de conexão externa
 
+### Implementando algoritmos de ruído e geração procedural
+
+### Implementando um processador de 8 bits
+
 ### Implementando IPC
 
-### Como FFI funciona
+### Implementando um parser de arquivos de configuração (.cfg, .ini, .conf)
 
-### Como LLVM funciona

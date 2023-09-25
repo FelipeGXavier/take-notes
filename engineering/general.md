@@ -76,3 +76,16 @@ https://handmade.network/forums/articles/t/2363-implementing_a_basic_png_reader_
 É um tipo especial de dado em banco de dados destinado ao armazenamento de dados binários de qualquer tamanho. 
 
 Se fosse armazenar um audio por exemplo, seria lido o arquivo em stream e transformado em um array de bytes que é inserido no banco como um blob.
+
+### Como FFI funciona
+
+### Como LLVM funciona
+
+
+### O que são headers pré-compilados
+
+
+### Como stdin, stdout e stderr funciona
+
+
+### Como POSIX e System Calls funcionam
