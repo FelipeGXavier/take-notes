@@ -89,3 +89,5 @@ Se fosse armazenar um audio por exemplo, seria lido o arquivo em stream e transf
 
 
 ### Como POSIX e System Calls funcionam
+
+### Quais são os comandos de kill e o que representam (SIGKILL etc)
