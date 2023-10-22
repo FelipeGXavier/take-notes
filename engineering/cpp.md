@@ -260,3 +260,56 @@ private:
     Inner* innerPtr;
 };
 </pre>
+
+<hr>
+
+Para declarar namespace você utiliza a sintaxe `namespace <namespace_name> {}` e no header file igual, você declara as funções classes etc. dentro do bloco de namespace. 
+
+Isso permite por exemplo duas funções com mesmo nome, mas em diferente namespaces.
+
+<hr>
+
+Em C++ podemos definir que queremos passar um parâmetro por referência utilizando a sintaxe `type &<variable_name>`
+
+Isso indica que não queremos copiar o valor da variável e trabalhar diretamente com o parâmetro passado, isso funciona de forma similiar a passar um ponteiro, mas tem algumas diferenças em questão de gerenciamento de memória.
+
+Entretanto essas duas funções atingem o mesmo objetivo, alterar o valor passado por parâmetro.
+
+<pre>
+void callStr(std::string &s) {
+    s = "asd";
+    cout << &s << endl;
+}
+
+void callStr(std::string *s) {
+    *s = "asd";
+    cout << s << endl;
+}
+</pre>
+
+<hr>
+
+Por que std::string tem o sizeof de 32 bytes? Na implementação de std::string normalmente são utilizados campos auxiliares além de apenas um ponteiro de char.
+
+Algo assim: 
+
+<pre>
+template <typename T>
+struct basic_string {
+    char* begin_;
+    size_t size_;
+    union {
+        size_t capacity_;
+        char sso_buffer[16];
+    };
+};
+</pre>
+
+char* tem 8 bytes, size_t tem 4 bytes somando esses tipos com o buffer de char[16] resulta em 32 bytes.
+
+Esses valores podem mudar dependendo do compilador.
+
+/*Comparaing float points
+Set precision 
+String manipulation, split, join, concat, indexOf, replace
+Casting between types*/

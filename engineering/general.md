@@ -90,4 +90,10 @@ Se fosse armazenar um audio por exemplo, seria lido o arquivo em stream e transf
 
 ### Como POSIX e System Calls funcionam
 
-### Quais são os comandos de kill e o que representam (SIGKILL etc)
+### Quais são os comandos de execução e o que representam (SIGKILL etc)
+
+### O que é QEMU e seu protocolo
+
+### Como KVM funciona
+
+### Como LSP (Lang. Server Port) works on IDE's
