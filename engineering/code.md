@@ -22,5 +22,8 @@
 
 ### Implementando um parser de arquivos de configuração (.cfg, .ini, .conf)
 
+### Como implementar um daemon que serve como intermediário de requisições server to server com uma interface web
+
+### Como FFI funciona
 
 ### Implementando um URI parser 

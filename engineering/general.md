@@ -29,17 +29,37 @@ Bibliotecas dinâmicas são binários carregados em runtime em uma linguagem. S�
 
 ## .dll
 
-DLL (Dynamic Link Library)
+DLL (Dynamic Link Library) é como são chamadas as bibliotecas dinâmicas no Windows e podem possuir classes, objetos, funções, variáveis, bitmaps etc.
 
 ## .so 
 
+SO (Shared Objects) é como são chamadas as bibliotecas dinâmicas em sistemas operacionais baseados em UNIX. Assim como as DDL's do Windows podem exportar classes, funções, objetos, variáveis etc.
+
 ## .a
+
+Arquivos com a extensão .a em sistemas baseados em UNIX representam as bibliotecas estáticas. Normalmente são incluídas em tempo de compilação de um binário.
 
 ## .lib
 
+Arquivos com a extensão .lib no Windows representam as bibliotecas státicas. Normalmente incluídas em tempo de compilação de binários.
+
 ## O que são arquivos ELF
 
+ELF (Executable and Linkable Format) é um formato de arquivo binário utilizados em sistemas UNIX para representar executáveis, bibliotecas compartilhadas e objetos intermediários.
+
+Se você utilizar o commando xxd em um arquivo .so ou outro binário como .a muito provavelmente você verá a sigla ELF no ínicio do arquivo. 
+
+### Bash
+
+### Makefile
+
+Makefile são basicamnete arquivos de build que funcionam como um "script" descrevendo comandos a serem executados como comandas de bash para compilar um código por exemplo.
+
 ### CMake
+
+## Unity builds
+
+## Compiled headers
 
 ### Distribuindo bibliotecas em linguagens compiladas
 
