@@ -313,3 +313,61 @@ Esses valores podem mudar dependendo do compilador.
 Set precision 
 String manipulation, split, join, concat, indexOf, replace
 Casting between types*/
+
+<hr>
+
+C++ define implicitante um copy constructor que chamado quando iniciamos um objeto com um objeto de mesmo tipo previamente definido. Podemos definir explicitando como: `MyClass(const MyClass& ref) {}`. Esse construtor é chamado quando passamos um objeto como argumento de uma função e é feita uma cópia by value. 
+
+Podemos evitar que um objeto seja copiado diretamente deletando o copy constructor com essa sintaxe: 
+
+<pre>
+MyClass(const MyClass& ref) = delete;
+</pre>
+
+Tentar criar um objeto a partir de outro objeto irá resultar um erro de compilação.
+
+Por que no `copy constructor` o valor é passado por referência? Por que se fosse passado by value o `copy constructor` seria chamado o que resultaria num loop infinito.
+
+<hr>
+
+C++ permite construtores ímplicitos em conversões. Por exemplo: 
+
+<pre>
+class Foo {
+    private:
+        int value;
+    public:
+        Foo(int value): value(value) {};
+        int get() {
+            return this->value;
+        }
+};
+
+void print(Foo f) {
+    std::cout << f.get() << std::endl;
+}
+
+Foo f(10);
+print(f);
+print(10);
+</pre>
+
+Note que passar o valor como int funciona mais implicitamente é chamado o construtor com esse valor. Se quisermos forçar que a chamada seja sempre explicita podemos marcar o construtor como `explicit`. Isso não funciona para `copy constructor`.
+
+<hr>
+
+Em C++ o ponteiro `this` é passado implicitamente na chamada de métodos. 
+
+<pre>
+class Foo {
+    private:
+        int value;
+    public:
+        Foo(int value): value(value) {};
+        int get() {
+            return this->value;
+        }
+};
+<pre>
+
+Chamar `foo.get();` é traduzido para: `get(&foo);` e a função que espera: `get(Foo* f);`
