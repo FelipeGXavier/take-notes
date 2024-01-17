@@ -155,3 +155,19 @@ flags:	02
 mnt_id:	9
 ino:	215203
 </pre>
+
+### Conexão
+
+Quando é estabelecida uma conexão entre um socket e outro cada conexão é individual e representado pelo descritor de arquivos. 
+
+No loop básico por pseudo-código:
+
+<pre>
+SocketServer socketListener = listen(...)
+while(true) {
+    SocketConnection connection = socketListener.accept()
+    // ...
+}
+</pre>
+
+Vão sempre existir ao menos um descritor de arquivo aberto esperando por conexões **socketListener** e cada objeto **connection** vai ser um descritor de arquivo diferente (um socket diferente).

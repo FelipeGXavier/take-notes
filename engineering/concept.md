@@ -1,6 +1,22 @@
 ### Endians
 
-### Most and least signficant bit
+O conceito chamado de *endianess* se refere a forma um valor multi-byte deve ser interpretado. 
+
+Existem dois tipos de referência: big-endian e little-endian. No caso do big-endian o byte mais importante, o que carrega mais "peso" fica por primeiro. Enquanto no little-endian é o contrário, o byte com menor relevância vai por primeiro. 
+
+O que define a utilização de big-endian ou little-endian é a arquitetura do computador. 
+
+Por exemplo, no caso do número 16909060:
+
+Na representação big-endian ficaria `00000001 00000010 00000011 00000100`
+
+Enquanto na representação little-endian ficaria `00000100 00000011 00000010 00000001` 
+
+Como se invertessa a ordem da leitura. 
+
+Importante ressaltar que o conceito de endianess só é funcional para informações multi-byte e é sobre ordem de bytes e não bits. 
+
+Na comunicação entre computadores como uma rede é concenso através de RFC's na maioria dos casos o uso do formato big-endian, então sempre que necessário um computador little-endia formato o valor enviado para que a comunicação possa ocorrer. 
 
 ### Bitwise operations
 
