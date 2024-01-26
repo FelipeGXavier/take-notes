@@ -28,4 +28,4 @@ func main() {
 
 2. Como que conseguimos conectar em chamadas ponto a ponto como VOIP sendo que na maiorias das vezes estamos através de um NAT e uma rede interna não exposta?
 
-3. Como funciona /proc/<pid>/fd/
+3. Como funciona /proc/[pid]/fd/
