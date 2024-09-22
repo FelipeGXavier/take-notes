@@ -57,10 +57,6 @@ Makefile são basicamnete arquivos de build que funcionam como um "script" descr
 
 ### CMake
 
-## Unity builds
-
-## Compiled headers
-
 ### Distribuindo bibliotecas em linguagens compiladas
 
 Em C++ e C para distribuir executáveis e ou bibliotecas segue a seguinte forma: é disponibilizado o código fonte e a distribuição alvo faz o build pelo CMake ou outro ferramental e é utilizado o binário. Isso ocorre porque não é trivial fazer o build de um código em C++ em uma distro Linux e garantir que funcione em outra. 
@@ -101,19 +97,13 @@ Se fosse armazenar um audio por exemplo, seria lido o arquivo em stream e transf
 
 ### Como LLVM funciona
 
-
 ### O que são headers pré-compilados
 
-
 ### Como stdin, stdout e stderr funciona
-
 
 ### Como POSIX e System Calls funcionam
 
 ### Quais são os comandos de execução e o que representam (SIGKILL etc)
 
-### O que é QEMU e seu protocolo
-
-### Como KVM funciona
-
 ### Como LSP (Lang. Server Port) works on IDE's
+

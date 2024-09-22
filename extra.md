@@ -2,8 +2,6 @@
 
 ### Implementar subnet mask/CIDR usando bitwise
 
-### Move constructor
-
 ### Como binários são distrubuídos? apt, rpm, dev etc
 
 Bit masking
